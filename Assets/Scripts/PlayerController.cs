@@ -1,15 +1,15 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Pong
+namespace Pong.Controllers
 {
     public class PlayerController : MonoBehaviour
     {
-        [Header("Movement")] 
+        [Header("Movement")]
         [SerializeField] private Rigidbody2D myRigidBody;
         [SerializeField] private float speed = 2f;
 
-        [Header("Player Input")] 
+        [Header("Player Input")]
         [SerializeField] private Key upKey = Key.W;
         [SerializeField] private Key downKey = Key.S;
 

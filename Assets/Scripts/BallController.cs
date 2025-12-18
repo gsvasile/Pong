@@ -29,11 +29,13 @@ namespace Pong
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         private void Start()
         {
-            StartMovement();
+            LaunchBall();
         }
 
-        private void StartMovement()
+        public void LaunchBall()
         {
+            transform.position = Vector2.zero;
+            
             float x = 0;
             float y = 0;
 
@@ -68,11 +70,6 @@ namespace Pong
             }
 
             myRigidBody.linearVelocity = new Vector2(x, y) * speed;
-        }
-
-        // Update is called once per frame
-        private void Update()
-        {
         }
     }
 }

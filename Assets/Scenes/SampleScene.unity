@@ -405,6 +405,7 @@ GameObject:
   - component: {fileID: 522723677}
   - component: {fileID: 522723676}
   - component: {fileID: 522723678}
+  - component: {fileID: 522723679}
   m_Layer: 0
   m_Name: LeftGoal
   m_TagString: Untagged
@@ -516,7 +517,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -532,6 +533,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &522723679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522723675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08279f362d7fee74dacdbad724f2b439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  isGoalOnPlayer1sSide: 1
+  ballController: {fileID: 1364150158}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +825,7 @@ GameObject:
   - component: {fileID: 1042946968}
   - component: {fileID: 1042946967}
   - component: {fileID: 1042946969}
+  - component: {fileID: 1042946970}
   m_Layer: 0
   m_Name: 'RightGoal '
   m_TagString: Untagged
@@ -921,7 +937,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -937,6 +953,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1042946970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042946966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08279f362d7fee74dacdbad724f2b439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  isGoalOnPlayer1sSide: 0
+  ballController: {fileID: 1364150158}
 --- !u!1 &1364150154
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +982,7 @@ GameObject:
   - component: {fileID: 1364150158}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
