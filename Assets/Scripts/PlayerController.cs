@@ -1,29 +1,54 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+namespace Pong
 {
-    [SerializeField] private Rigidbody2D _myRigidBody;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Start()
+    public class PlayerController : MonoBehaviour
     {
-    }
+        [Header("Movement")] 
+        [SerializeField] private Rigidbody2D myRigidBody;
+        [SerializeField] private float speed = 2f;
 
-    // Update is called once per frame
-    private void Update()
-    {
-        if (Keyboard.current.wKey.IsPressed())
+        [Header("Player Input")] 
+        [SerializeField] private Key upKey = Key.W;
+        [SerializeField] private Key downKey = Key.S;
+
+        // Stores direction that the player will move
+        private float _direction;
+
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        private void Start()
         {
-            Debug.Log("Button W was pressed");
-            _myRigidBody.linearVelocity = Vector2.up;
         }
 
-        if (Keyboard.current.sKey.IsPressed())
+        // Update is called once per frame
+        private void Update()
         {
-            Debug.Log("Button S was pressed");
+            PlayerInput();
 
-            _myRigidBody.linearVelocity = Vector2.down;
+            myRigidBody.linearVelocity = new Vector2(0, _direction) * speed;
+        }
+
+        private void PlayerInput()
+        {
+            var kb = Keyboard.current;
+            if (kb == null)
+            {
+                return;
+            }
+
+            if (upKey != Key.None && kb[upKey].IsPressed())
+            {
+                _direction = 1f;
+            }
+            else if (downKey != Key.None && kb[downKey].IsPressed())
+            {
+                _direction = -1f;
+            }
+            else
+            {
+                _direction = 0f;
+            }
         }
     }
 }

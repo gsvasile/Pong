@@ -795,7 +795,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcab7b989ca62174391dfeaeece83f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  _myRigidBody: {fileID: 946524776}
+  myRigidBody: {fileID: 946524776}
+  speed: 2
+  upKey: 37
+  downKey: 33
 --- !u!1 &1042946966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1087,7 @@ GameObject:
   - component: {fileID: 1632876888}
   - component: {fileID: 1632876890}
   - component: {fileID: 1632876891}
+  - component: {fileID: 1632876892}
   m_Layer: 0
   m_Name: PlayerRight
   m_TagString: Untagged
@@ -1238,6 +1242,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1632876892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632876887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcab7b989ca62174391dfeaeece83f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZeroToMastery.Pong.PlayerController
+  myRigidBody: {fileID: 1632876890}
+  speed: 2
+  upKey: 23
+  downKey: 25
 --- !u!1 &1936554836
 GameObject:
   m_ObjectHideFlags: 0
