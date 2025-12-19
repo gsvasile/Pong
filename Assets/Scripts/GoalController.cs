@@ -7,6 +7,7 @@ namespace Pong.Controllers
     {
         [SerializeField] private bool isGoalOnPlayer1sSide;
         [SerializeField] private BallController ballController;
+        [SerializeField] private GameManager gameManager;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -19,11 +20,11 @@ namespace Pong.Controllers
             // If isGoalOnPlayer1Side is false, this means that this is the goal on Player1's side.
             if (!isGoalOnPlayer1sSide)
             {
-                Debug.Log("Player 1 Scored!");
+                gameManager.Player1Scored();
             }
             else
             {
-                Debug.Log("Player 2 Socred!");
+                gameManager.Player2Scored();
             }
 
             ballController.LaunchBall();
