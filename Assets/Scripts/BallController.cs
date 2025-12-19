@@ -35,7 +35,7 @@ namespace Pong
         public void LaunchBall()
         {
             transform.position = Vector2.zero;
-            
+
             float x = 0;
             float y = 0;
 
